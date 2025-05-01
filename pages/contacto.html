@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <header class="encabezado-dos">
+      <section>
+        <img src="../assets/Imagen 1.png" alt="logo" width="70px" />
+        <nav>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./profesionales.html">Profesionales</a></li>
+            <li><a href="./turnos.html">Turnos</a></li>
+            <li><a href="./farmacia.html">Farmacia</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <section class="contact">
+        <article class="donde-encontrarnos bg-colorgrey">
+          <h2>Donde encontrarnos</h2>
+          <img
+            src="../assets/ubicacion.png"
+            alt="icono ubicacion"
+            width="30px"
+          />
+          <p>Lavalle 886, Luján, Buenos Aires, CP6700</p>
+          <img src="../assets/reloj.png" alt="icono reloj" width="20px" />
+          <p>Horario de atencion: Lunes a viernes de 8hs a 20 hs</p>
+          <img src="../assets/telefono.png" alt="icono telefono" width="20px" />
+          <p>
+            Telefono: 2323 11111 <br />
+            Horario de atencion de 11 hs a 17 hs
+          </p>
+        </article>
+        <article class="contactanos">
+          <h2>Contactanos</h2>
+          <div>
+            <form action="/sumbit" method="post">
+              <label>Nombre y Apellido</label>
+              <input type="text" name="nombre-apellido" id="nombre-apellido" />
+              <label>Telefono</label>
+              <input type="tel" name="telefono" id="telefono" />
+              <label>Email</label>
+              <input type="email" name="email" id="email" />
+              <label>Obra Social</label>
+              <input type="text" name="obra-social" id="obra-social" />
+              <label>Profesional</label>
+              <select name="profesionales" id="profesionales">
+                <option value="">Medico1</option>
+                <option value="">Medico2</option>
+                <option value="">Medico3</option>
+                <option value="">Medico4</option>
+                <option value="">Medico5</option>
+                <option value="">Medico6</option>
+              </select>
+              <label>Consulta</label>
+              <textarea name="Consulta" id="consulta"></textarea>
+              <div class="button">
+                <input type="button" value="Enviar" id="boton" />
+              </div>
+            </form>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>@ConsulltoriosLavalle2025</p>
+    </footer>
+  </body>
+</html>

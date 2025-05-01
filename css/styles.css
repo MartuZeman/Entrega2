@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap");
+
+:root {
+  --color-primary: #93d3cc;
+  --color-secundary: #8ab2b4;
+  --color-terciary: #ccdadb;
+  --color-primary-dark2: #134341;
+  --color-primary-dark: #227573;
+  --color-lightblue: #9dc2bc;
+  --color-white: #ffffff;
+  --color-grey: #f0f0f0;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+header.encabezado {
+  background-image: url(../assets/fotoencabezado3.webp);
+  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+  background-position: center; /* Centra la imagen en la pantalla */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 200px;
+  border-bottom: 2px solid var(--color-primary-dark);
+}
+header.encabezado img {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+header.encabezado nav {
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+header.encabezado nav li {
+  float: left;
+  list-style: none;
+  padding: 7px;
+  font-size: 20px;
+}
+header.encabezado nav li a {
+  color: black;
+  text-decoration: none;
+}
+header.encabezado h1 {
+  text-align: center;
+  font-size: 60px;
+  font-family: "Birthstone", cursive;
+}
+main section.principal article {
+  width: 50%;
+  float: left;
+  height: 300px;
+}
+main section.principal article h2 {
+  padding: 20px;
+  font-family: "Fleur De Leah", cursive;
+  font-size: 40px;
+}
+main section.principal article img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.bg-colorsecundary {
+  display: flex;
+  background-color: var(--color-lightblue);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+main section.profesionales {
+  border-bottom: 2px solid var(--color-primary-dark2);
+  border-top: 2px solid var(--color-primary-dark2);
+  float: left;
+  width: 100%;
+}
+main section.profesionales article {
+  text-align: center;
+  padding-bottom: 40px;
+}
+main section.profesionales article.medicos {
+  float: left;
+  width: 20%;
+  display: block;
+  text-align: center;
+}
+main section.profesionales article.flecha {
+  float: left;
+  width: 10%;
+}
+main section.profesionales img {
+  width: 30%;
+}
+main section.profesionales article.medicos img {
+  width: 200px;
+}
+main section.profesionales article.medicos p {
+  font-size: 20px;
+}
+main section.profesionales h2 {
+  padding: 20px;
+  padding-bottom: 50px;
+}
+main section.contacto {
+  float: left;
+  width: 100%;
+  background-color: var(--color-terciary);
+}
+
+main section.contacto article {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+}
+main section.contacto article.donde-encontrarnos {
+  height: 300px;
+  width: 50%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main section.contacto article.donde-encontrarnos h2 {
+  padding-left: 50px;
+  padding-top: 20px;
+}
+main section.contacto article.donde-encontrarnos p {
+  padding-left: 50px;
+}
+main section.contacto article.donde-encontrarnos img {
+  padding-left: 50px;
+}
+main section.contacto article.contactanos {
+  width: 50%;
+  height: 100%;
+}
+
+main section.contacto article.contactanos {
+margin-top: 15px;
+
+}
+
+main section.contacto article.contactanos button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--color-primary-dark);
+  border-radius: 5px;
+  border: 1px solid var(--color-primary-dark2);
+  color: var(--color-white);
+  padding: 5px;
+} 
+
+#boton {
+  width: 50%;
+  background-color: var(--color-primary-dark);
+  border-radius: 5px;
+  border: 1px solid var(--color-primary-dark);
+  color: var(--color-white);
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+footer {
+  float: left;
+  width: 100%;
+  background-color: var(--color-lightblue);
+  border-top: 2px solid var(--color-primary-dark2);
+  text-align: center;
+  justify-content: center;
+  height: 40px;
+}
+/* ccs para pagina farmacia */
+main section.obrassociales {
+  border-bottom: 2px solid var(--color-primary-dark2);
+  border-top: 2px solid var(--color-primary-dark2);
+  float: left;
+  width: 100%;
+}
+main section.obrassociales article {
+  text-align: center;
+  padding-bottom: 40px;
+}
+main section.obrassociales article.obra-social {
+  float: left;
+  width: 20%;
+  display: block;
+  text-align: center;
+}
+main section.obrassociales article.flecha {
+  float: left;
+  width: 10%;
+}
+main section.obrassociales img {
+  width: 30%;
+}
+main section.obrassociales article.obra-social img {
+  width: 100px;
+}
+main section.obrassociales article.obra-social p {
+  font-size: 20px;
+}
+main section.obrassociales h2 {
+  padding: 20px;
+  padding-bottom: 50px;
+}
+main section.vacunacion {
+  float: left;
+  width: 100%;
+  background-color: var(--color-terciary);
+}
+main section.vacunacion article {
+  width: 50%;
+  float: left;
+  height: 300px;
+}
+main section.vacunacion h2 {
+  padding: 30px;
+}
+main section.vacunacion article h2 {
+  padding: 20px;
+  font-family: "Fleur De Leah", cursive;
+  font-size: 40px;
+}
+main section.vacunacion article img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.bg-colorwhite {
+  display: flex;
+  background-color: var(--color-white);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+main section.contactos {
+  float: left;
+  width: 100%;
+  background-color: var(--color-white);
+  border-top: 2px solid var(--color-primary-dark2);
+}
+main section.contactos article {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+}
+main section.contactos article.donde-encontrarnos {
+  height: 300px;
+  width: 50%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main section.contactos article.donde-encontrarnos h2 {
+  padding-left: 50px;
+  padding-top: 20px;
+}
+main section.contactos article.donde-encontrarnos p {
+  padding-left: 50px;
+}
+main section.contactos article.donde-encontrarnos img {
+  padding-left: 50px;
+}
+main section.contactos article.contactanos {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+main section.contactos article.contactanos div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  width: 90%;
+  height: 100%;
+}
+main section.contactos article.contactanos div form {
+  padding-right: 70px;
+}
+main section.contactos article.contactanos input {
+  width: 100%;
+  padding: 2px;
+  margin: 5px;
+  background-color: var(--color-grey);
+  border-radius: 2px;
+  border: 2px solid var(--color-grey);
+}
+main section.contactos article.contactanos h2 {
+  text-align: left;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+main section.contactos article.contactanos select {
+  width: 100%;
+  padding: 2px;
+  margin: 5px;
+  background-color: var(--color-grey);
+  border-radius: 2px;
+  border: 2px solid var(--color-grey);
+}
+main section.contactos article.contactanos textarea {
+  width: 100%;
+  padding: 2px;
+  margin: 5px;
+  background-color: var(--color-grey);
+  border-radius: 2px;
+  border: 2px solid var(--color-grey);
+}
+main section.contactos article.contactanos div.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+/* pagina profesionales */
+header.encabezado-dos {
+  background-color: var(--color-terciary);
+  height: 60px;
+  border-bottom: 2px solid var(--color-primary-dark);
+}
+header.encabezado-dos img {
+  width: 50px;
+  margin-left: 15px;
+}
+header.encabezado-dos nav {
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+header.encabezado-dos nav li {
+  float: left;
+  list-style: none;
+  padding: 7px;
+  font-size: 20px;
+}
+header.encabezado-dos nav li a {
+  color: black;
+  text-decoration: none;
+}
+main section.profesionales2 {
+  float: left;
+  width: 100%;
+  padding-top: 30px;
+  height: 350px;
+}
+main section.profesionales2 article {
+  text-align: center;
+  padding-bottom: 40px;
+}
+main section.profesionales2 article.medicos {
+  float: left;
+  width: 20%;
+  display: block;
+  text-align: center;
+}
+main section.profesionales2 article.flecha {
+  float: left;
+  width: 10%;
+}
+main section.profesionales2 img {
+  width: 30%;
+}
+main section.profesionales2 article.medicos img {
+  width: 200px;
+}
+main section.profesionales2 article.medicos p {
+  font-size: 20px;
+}
+main section.profesionales2 h2 {
+  padding-left: 20px;
+  padding-bottom: 50px;
+}
+.imagenstaff img {
+  float: left;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+/* pagina contacto */
+
+main section.contact {
+  width: 100%;
+}
+
+main section.contact article {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+}
+main section.contact article.donde-encontrarnos {
+  height: 300px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-grey);
+  padding-bottom: 40px;
+}
+main section.contact article.donde-encontrarnos h2 {
+  padding-left: 50px;
+  padding-top: 20px;
+}
+main section.contact article.donde-encontrarnos p {
+  padding-left: 50px;
+}
+main section.contact article.donde-encontrarnos img {
+  padding-left: 50px;
+}
+main section.contact article.contactanos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section.contact article.contactanos div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 60%;
+  border-radius: 10px;
+  background-color: var(--color-grey);
+  margin-bottom: 40px;
+}
+main section.contact article.contactanos div form {
+  padding-top: 30px;
+  width: 80%;
+}
+main section.contact article.contactanos div form input {
+  width: 100%;
+  padding: 2px;
+  margin-bottom: 10px;
+  background-color: var(--color-white);
+  border-radius: 2px;
+  border: 2px solid var(--color-white);
+}
+main section.contact article.contactanos h2 {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+main section.contact article.contactanos select {
+  width: 100%;
+  padding: 2px;
+  margin-bottom: 10px;
+  background-color: var(--color-white);
+  border-radius: 2px;
+  border: 2px solid var(--color-white);
+}
+main section.contact article.contactanos textarea {
+  width: 100%;
+  padding: 2px;
+  margin-bottom: 10px;
+  background-color: var(--color-white);
+  border-radius: 2px;
+  border: 2px solid var(--color-white);
+}
+main section.contact article.contactanos div.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+main section.contact article.contactanos div.button #boton {
+  width: 50%;
+  background-color: var(--color-primary-dark);
+  border-radius: 5px;
+  border: 1px solid var(--color-primary-dark);
+  color: var(--color-white);
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* Pagina turnos */
+main section.horario h1 {
+  padding: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+main section.horario div {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+main section.turnos button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--color-primary-dark);
+  border-radius: 5px;
+  border: 1px solid var(--color-primary-dark2);
+  color: var(--color-white);
+  padding: 5px;
+}
+/* main section.turnos {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 10px;
+  height: 220px;
+}  */
+
+/* main section.turnos form {
+  margin: 10px;
+}
+main section.turnos input {
+  margin: 10px;
+  width: 200px;
+}
+main section.turnos select {
+  margin: 10px;
+  width: 200px;
+}
