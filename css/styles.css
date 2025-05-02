@@ -484,7 +484,7 @@ main section.horario h1 {
 }
 
 main section.horario div {
-  width: 1100px;
+  width: 80%;
   margin: 0 auto;
   padding: 10px;
 }
@@ -498,21 +498,75 @@ main section.turnos button{
   color: var(--color-white);
   padding: 5px;
 }
-/* main section.turnos {
-  width: 1100px;
-  margin: 0 auto;
-  padding: 10px;
-  height: 220px;
-}  */
 
-/* main section.turnos form {
-  margin: 10px;
+@media (max-width: 768px) {
+  .turnos form .form-label {
+    font-size: 16px;
+  }
+
+  .turnos form input,
+  .turnos form select {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  .turnos form .col-6,
+  .turnos form .col-4,
+  .turnos form .col-8,
+  .turnos form .col-3,
+  .turnos form .col-9 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .turnos .btn-sm {
+    width: 100%;
+  }
+
+  .turnos button {
+    font-size: 16px;
+    padding: 10px;
+  }
 }
-main section.turnos input {
-  margin: 10px;
-  width: 200px;
+
+@media (max-width: 576px) {
+  header.encabezado-dos img {
+    width: 40px;
+    margin-left: 0;
+  }
+
+  header.encabezado-dos nav li {
+    font-size: 16px;
+  }
+
+  main section.horario h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  main section.horario div img {
+    width: auto;
+    height: auto;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+  }
 }
-main section.turnos select {
-  margin: 10px;
-  width: 200px;
+
+section.horario div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
 }
+
+section.horario div img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
