@@ -483,11 +483,11 @@ main section.horario h1 {
   padding-left: 20px;
 }
 
-main section.horario div {
+/* main section.horario div {
   width: 80%;
   margin: 0 auto;
   padding: 10px;
-}
+} */
 
 main section.turnos button{
   margin-top: 10px;
