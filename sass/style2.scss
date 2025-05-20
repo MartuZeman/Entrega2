@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap");
+
+// Variables
+$color-primary: #93d3cc;
+$color-secundary: #8ab2b4;
+$color-terciary: #ccdadb;
+$color-primary-dark2: #134341;
+$color-primary-dark: #227573;
+$color-lightblue: #9dc2bc;
+$color-white: #ffffff;
+$color-grey: #f0f0f0;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header.encabezado {
+  background: url(../assets/fotoencabezado3.webp) center/cover no-repeat;
+  height: 200px;
+  border-bottom: 2px solid $color-primary-dark;
+
+  img {
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+
+  nav {
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+
+    li {
+      float: left;
+      list-style: none;
+      padding: 7px;
+      font-size: 20px;
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: "Birthstone", cursive;
+  }
+}
+
+main {
+  section.principal {
+    article {
+      width: 50%;
+      float: left;
+      height: 300px;
+
+      h2 {
+        padding: 20px;
+        font-family: "Fleur De Leah", cursive;
+        font-size: 40px;
+      }
+
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  section.profesionales,
+  section.obrassociales {
+    border-bottom: 2px solid $color-primary-dark2;
+    border-top: 2px solid $color-primary-dark2;
+    float: left;
+    width: 100%;
+
+    article {
+      text-align: center;
+      padding-bottom: 40px;
+
+      &.medicos,
+      &.obra-social {
+        float: left;
+        width: 20%;
+        display: block;
+        text-align: center;
+
+        img {
+          width: 200px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+
+      &.flecha {
+        float: left;
+        width: 10%;
+      }
+    }
+
+    img {
+      width: 30%;
+    }
+
+    h2 {
+      padding: 20px;
+      padding-bottom: 50px;
+    }
+  }
+
+  section.contacto,
+  section.contactos,
+  section.contact {
+    float: left;
+    width: 100%;
+
+    &.contacto {
+      background-color: $color-terciary;
+    }
+
+    &.contactos {
+      background-color: $color-white;
+      border-top: 2px solid $color-primary-dark2;
+    }
+
+    article {
+      float: left;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: left;
+
+      &.donde-encontrarnos {
+        height: auto;
+        width: 50%;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        h2 {
+          padding-left: 50px;
+          padding-top: 20px;
+        }
+
+        p,
+        img {
+          padding-left: 50px;
+        }
+      }
+
+      &.contactanos {
+        width: 50%;
+        height: 100%;
+
+        margin-top: 15px;
+
+        h2 {
+          text-align: left;
+          width: 100%;
+          padding-top: 15px;
+          padding-bottom: 20px;
+        }
+
+        input,
+        select,
+        textarea {
+          width: 100%;
+          padding: 2px;
+          margin: 5px;
+          background-color: $color-grey;
+          border-radius: 2px;
+          border: 2px solid $color-grey;
+        }
+
+        button {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          background-color: $color-primary-dark;
+          border-radius: 5px;
+          border: 1px solid $color-primary-dark2;
+          color: $color-white;
+          padding: 5px;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: left;
+          text-align: left;
+          width: 90%;
+          height: 100%;
+
+          form {
+            padding-right: 70px;
+          }
+
+          &.button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+  section.vacunacion {
+    float: left;
+    width: 100%;
+    background-color: $color-terciary;
+
+    article {
+      width: 50%;
+      float: left;
+      height: 300px;
+
+      h2 {
+        padding: 20px;
+        font-family: "Fleur De Leah", cursive;
+        font-size: 40px;
+      }
+
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+
+    h2 {
+      padding: 30px;
+    }
+  }
+
+  section.horario {
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      width: 100%;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    h1 {
+      padding: 10px 0 0 20px;
+    }
+  }
+
+  section.turnos {
+    button {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background-color: $color-primary-dark;
+      border-radius: 5px;
+      border: 1px solid $color-primary-dark2;
+      color: $color-white;
+      padding: 5px;
+    }
+  }
+}
+
+footer {
+  float: left;
+  width: 100%;
+  background-color: $color-lightblue;
+  border-top: 2px solid $color-primary-dark2;
+  text-align: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.bg-colorsecundary {
+  display: flex;
+  background-color: $color-lightblue;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-colorwhite {
+  display: flex;
+  background-color: $color-white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#boton {
+  width: 50%;
+  background-color: $color-primary-dark;
+  border-radius: 5px;
+  border: 1px solid $color-primary-dark;
+  color: $color-white;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+header.encabezado-dos {
+  background-color: $color-terciary;
+  height: 60px;
+  border-bottom: 2px solid $color-primary-dark;
+
+  img {
+    width: 50px;
+    margin-left: 15px;
+  }
+
+  nav {
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+
+    li {
+      float: left;
+      list-style: none;
+      padding: 7px;
+      font-size: 20px;
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+main section.profesionales2 {
+  float: left;
+  width: 100%;
+  padding-top: 30px;
+  height: 350px;
+
+  article {
+    text-align: center;
+    padding-bottom: 40px;
+
+    &.medicos {
+      float: left;
+      width: 20%;
+      display: block;
+      text-align: center;
+
+      img {
+        width: 200px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    &.flecha {
+      float: left;
+      width: 10%;
+    }
+  }
+
+  img {
+    width: 30%;
+  }
+
+  h1 {
+    padding-left: 20px;
+    padding-bottom: 50px;
+  }
+}
+
+.imagenstaff img {
+  float: left;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .turnos form {
+    .form-label {
+      font-size: 16px;
+    }
+
+    input,
+    select {
+      width: 100% !important;
+      margin-bottom: 10px;
+    }
+
+    .col-6,
+    .col-4,
+    .col-8,
+    .col-3,
+    .col-9 {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .turnos .btn-sm {
+    width: 100%;
+  }
+
+  .turnos button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  header.encabezado-dos img {
+    width: 40px;
+    margin-left: 0;
+  }
+
+  header.encabezado-dos nav li {
+    font-size: 16px;
+  }
+
+  main section.horario h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  main section.horario div img {
+    width: auto;
+    height: auto;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+  }
+}

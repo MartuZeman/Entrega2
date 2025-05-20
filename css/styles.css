@@ -42,6 +42,10 @@ header.encabezado nav li a {
   color: black;
   text-decoration: none;
 }
+header.encabezado nav li a:hover{
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
 header.encabezado h1 {
   text-align: center;
   font-size: 60px;
@@ -94,6 +98,9 @@ main section.profesionales img {
 }
 main section.profesionales article.medicos img {
   width: 200px;
+}
+main section.profesionales article.medicos img:hover {
+transform: scale(1.05);
 }
 main section.profesionales article.medicos p {
   font-size: 20px;
@@ -198,6 +205,10 @@ main section.obrassociales img {
 }
 main section.obrassociales article.obra-social img {
   width: 100px;
+}
+main section.obrassociales article.obra-social img:hover {
+  width: 100px;
+  transform: scale(1.1);
 }
 main section.obrassociales article.obra-social p {
   font-size: 20px;
@@ -342,6 +353,10 @@ header.encabezado-dos nav li a {
   color: black;
   text-decoration: none;
 }
+header.encabezado-dos nav li a:hover{
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
 main section.profesionales2 {
   float: left;
   width: 100%;
@@ -367,6 +382,9 @@ main section.profesionales2 img {
 }
 main section.profesionales2 article.medicos img {
   width: 200px;
+}
+main section.profesionales2 article.medicos img:hover {
+  transform: scale(1.05);
 }
 main section.profesionales2 article.medicos p {
   font-size: 20px;
