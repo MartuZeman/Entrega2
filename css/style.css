@@ -552,8 +552,8 @@ main section.profesionales2 article.medicos p {
   section.contactos article.contactanos h2,
   section.contact article.donde-encontrarnos h2,
   section.contact article.contactanos h2 {
-    text-align: center;
-    padding-left: 0;
+    text-align: start;
+    padding-left: 10px;
   }
   section.contacto article.donde-encontrarnos .contenido,
   section.contactos article.donde-encontrarnos .contenido,
