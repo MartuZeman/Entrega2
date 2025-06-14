@@ -21,29 +21,47 @@ header.encabezado {
   height: 200px;
   border-bottom: 2px solid $color-primary-dark;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* Espaciado interno general (opcional) */
+  padding: 10px 20px;
+
+  /* Logo e ítems del nav en fila */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   img {
     margin-left: 15px;
     margin-top: 5px;
+    height: 50px; /* Opcional: para evitar que se desborde */
   }
 
   nav {
-    float: right;
-    margin-right: 20px;
     margin-top: 10px;
+    ul {
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
 
     li {
-      float: left;
       list-style: none;
-      padding: 7px;
       font-size: 20px;
 
       a {
         color: black;
         text-decoration: none;
         transition: all 0.3s ease-in-out;
-        &:hover{
-            color: $color-primary-dark;
-            border-bottom: 2px solid $color-primary-dark;
+
+        &:hover {
+          color: $color-primary-dark;
+          border-bottom: 2px solid $color-primary-dark;
         }
       }
     }
@@ -53,6 +71,7 @@ header.encabezado {
     text-align: center;
     font-size: 60px;
     font-family: "Birthstone", cursive;
+    margin: 0; /* Quitamos márgenes si había */
   }
 }
 
@@ -62,160 +81,236 @@ header.encabezado {
     flex-direction: column;
   }
 
-main {
+
+
+
   section.principal {
-    article {
-      width: 50%;
-      float: left;
-      height: 300px;
-
-      h2 {
-        padding: 20px;
-        font-family: "Fleur De Leah", cursive;
-        font-size: 40px;
-      }
-
-      img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-      }
-    }
-  }
-
-  section.profesionales,
-  section.obrassociales {
-    border-bottom: 2px solid $color-primary-dark2;
-    border-top: 2px solid $color-primary-dark2;
-    float: left;
+    display: flex;
+    flex-wrap: wrap; // permite que se acomode en mobile
     width: 100%;
+  
+        article {
+          flex: 0 0 50%; // 2 columnas
+          height: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        
+  
+          &.bg-colorsecundary {
+            background-color: $color-secundary; // o reemplazalo por un color real
+          }
+          &.bg-colorwhite{
+            background-color: $color-white;
+          }
+  
+          h2 {
+              font-family: "Fleur De Leah", cursive;
+              font-size: 40px;
+              padding: 20px;
+            }
+            
+           img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+           }
+  
+           section.profesionales {
+            width: 100%;
+            padding: 30px 0;
+          
+            h2 {
+              text-align: start;
+              padding-bottom: 40px;
+              padding-left: 40px;
+            }
+          
+            .contenedor-medicos {
+              display: flex;
+              justify-content: center; /* centra todo horizontalmente */
+              align-items: center;
+              gap: 15px; /* espacio entre elementos */
+              flex-wrap: nowrap; /* evita que se bajen los elementos */
+            }
+          
+            article.flecha {
+              flex: 0 0 5%; /* ancho fijo pequeño para flechas */
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          
+              img {
+                width: 30px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                &:hover {
+                  transform: scale(1.2);
+                }
+              }
+            }
+          
+            article.medicos {
+              flex: 0 0 18%; /* ancho fijo para cada médico */
+              text-align: center;
+          
+              img {
+                width: 100%;
+                max-width: 200px;
+                transition: transform 0.3s ease;
+                cursor: pointer;
+          
+                &:hover {
+                  transform: scale(1.05);
+                }
+              }
+          
+              p {
+                font-size: 18px;
+                margin-top: 10px;
+              }
+            }
+          }
+          
 
-    article {
-      text-align: center;
-      padding-bottom: 40px;
-
-      &.medicos,
-      &.obra-social {
-        float: left;
-        width: 20%;
-        display: block;
-        text-align: center;
-
-        img {
-          width: 200px; 
-        }
-
-        p {
-          font-size: 20px;
-        }
-      }
-      &.obra-social {
-        img{
-        width: 100px;
-         }
-       }
-
-      &.flecha {
-        float: left;
-        width: 10%;
-      }
-    }
-
-    img {
-      width: 30%;
-      transition: all 0.3s ease-in-out;
-      &:hover{
-        transform: scale(1.05);
-      }
-    }
-
-    h2 {
-      padding: 20px;
-      padding-bottom: 50px;
-    }
-  }
+          section.obrassociales {
+            border-top: 2px solid $color-primary-dark2;
+            border-bottom: 2px solid $color-primary-dark2;
+            width: 100%;
+            padding-bottom: 50px;
+          
+            h2 {
+              text-align: start;
+              padding: 20px 0 50px 40px;
+            }
+          
+            .contenedor-obras {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+            }
+          
+            article {
+              text-align: center;
+          
+              &.obra-social {
+                width: 15%;
+                min-width: 120px;
+          
+                img {
+                  width: 100px;
+                  transition: all 0.3s ease-in-out;
+          
+                  &:hover {
+                    transform: scale(1.05);
+                  }
+                }
+          
+                p {
+                  font-size: 16px;
+                }
+              }
+          
+              &.flecha {
+                width: 5%;
+                min-width: 40px;
+          
+                img {
+                  width: 100%;
+                  max-width: 40px;
+                }
+              }
+            }
+          }
+          
+          
+          
 
   section.contacto,
   section.contactos,
   section.contact {
-    float: left;
     width: 100%;
-
+    display: flex;
+    flex-direction: row; // para que los articles queden en fila
+  
     &.contacto {
       background-color: $color-terciary;
     }
-
+  
     &.contactos {
       background-color: $color-white;
       border-top: 2px solid $color-primary-dark2;
     }
-
+  
     article {
-      float: left;
-      @extend .displayflex;
-      align-items: left;
-      justify-content: left;
-
+      flex-wrap: wrap; // para que se adapte en mobile
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+  
       &.donde-encontrarnos {
-        height: auto;
-        width: 50%;
+        flex: 0 0 50%;
         justify-content: space-between;
         align-items: flex-start;
-        margin-top: 10px;
-        margin-bottom: 15px;
-
+        padding: 10px 0;
+        box-sizing: border-box;
+  
         h2 {
           padding-left: 50px;
           padding-top: 20px;
           padding-bottom: 20px;
         }
-
-
+  
         p,
         img {
           padding-left: 50px;
         }
       }
-
+  
       &.contactanos {
-        width: 50%;
-        height: 100%;
-        @extend .displayflex;
-        margin-top: 15px;
-
+        flex: 0 0 50%;
+        justify-content: flex-start;
+        padding: 15px;
+        box-sizing: border-box;
+  
         h2 {
           text-align: left;
           width: 100%;
           padding-top: 15px;
           padding-bottom: 20px;
         }
-
+  
         input,
         select,
         textarea {
           width: 100%;
           padding: 2px;
-          margin: 5px;
+          margin: 5px 0;
           background-color: $color-grey;
           border-radius: 2px;
           border: 2px solid $color-grey;
         }
-
+  
         button {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: $color-primary-dark;
-        border-radius: 5px;
-        border: 1px solid $color-primary-dark2;
-        color: $color-white;
-        padding: 5px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          background-color: $color-primary-dark;
+          border-radius: 5px;
+          border: 1px solid $color-primary-dark2;
+          color: $color-white;
+          padding: 5px;
         }
-
+  
         div {
           display: flex;
           flex-direction: column;
           text-align: left;
-
+  
           &.button {
             width: 100%;
             display: flex;
@@ -225,7 +320,7 @@ main {
       }
     }
   }
-
+  
   section.vacunacion {
     float: left;
     width: 100%;
@@ -285,7 +380,7 @@ main {
       padding: 5px;
     }
   }
-}
+
 
 footer {
   float: left;
@@ -298,25 +393,9 @@ footer {
 }
 
 
-@mixin bg-style($bgcolor){
-    display: flex;  
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: $bgcolor
-
-}
-
-.bg-colorsecundary {
- @include bg-style($color-lightblue)
 
 
-}
 
-.bg-colorwhite {
-@include bg-style($color-white)
-
-}
 
 #boton {
   width: 50%;
@@ -334,20 +413,25 @@ header.encabezado-dos {
   height: 60px;
   border-bottom: 2px solid $color-primary-dark;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
   img {
     width: 50px;
-    margin-left: 15px;
   }
 
   nav {
-    float: right;
-    margin-right: 20px;
-    margin-top: 10px;
+    ul {
+      display: flex;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+    }
 
     li {
-      float: left;
       list-style: none;
-      padding: 7px;
       font-size: 20px;
 
       a {
@@ -355,9 +439,9 @@ header.encabezado-dos {
         text-decoration: none;
         transition: all 0.3s ease-in-out;
 
-        &:hover{
-            color: $color-primary-dark, 30%;
-            border-bottom: 2px solid $color-primary-dark;
+        &:hover {
+          color: $color-primary-dark;
+          border-bottom: 2px solid $color-primary-dark;
         }
       }
     }
@@ -365,63 +449,97 @@ header.encabezado-dos {
 }
 
 main section.profesionales2 {
-  float: left;
   width: 100%;
   padding-top: 30px;
-  height: 350px;
-
-  article {
-    text-align: center;
-    padding-bottom: 40px;
-
-    &.medicos {
-      float: left;
-      width: 20%;
-      display: block;
-      text-align: center;
-
-      img {
-        width: 200px;
-        transition: all 0.3s ease-in-out;
-        &:hover{
-            transform: scale(1.05);
-        }
-      }
-
-      p {
-        font-size: 20px;
-      }
-    }
-
-    &.flecha {
-      float: left;
-      width: 10%;
-    }
-  }
-
-  img {
-    width: 30%;
-  }
+  padding-bottom: 100px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h1 {
     padding-left: 20px;
     padding-bottom: 50px;
+    text-align: center;
+  }
+
+  .contenedor-medicos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: nowrap; // <--- CLAVE
+  }
+
+  article {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  article.flecha {
+    flex: 0 0 5%; // más chico
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-width: 30px;
+    }
+  }
+
+  article.medicos {
+    flex: 0 0 20%; // 4 médicos = 80% total
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 200px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    p {
+      font-size: 20px;
+    }
   }
 }
 
-.imagenstaff img {
-  float: left;
+
+
+
+.imagenstaff {
+  display: flex;
+  justify-content: center; /* centra horizontalmente si querés */
+  align-items: center;     /* centra verticalmente si lo necesitás */
   width: 100%;
   height: 200px;
+  overflow: hidden;
+}
+
+.imagenstaff img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 // Media Queries
+
+
+
+
 @media (max-width: 768px) {
   .turnos form {
     .form-label {
       font-size: 16px;
     }
+
+
 
     input,
     select {
@@ -433,6 +551,7 @@ main section.profesionales2 {
     .col-4,
     .col-8,
     .col-3,
+    .col-2,
     .col-9 {
       width: 100%;
       padding: 0;
@@ -476,3 +595,148 @@ main section.profesionales2 {
   }
 }
 
+@media screen and (max-width: 576px) {
+  header.encabezado {
+    height: auto; /* Permitir que el header crezca */
+
+    .top-bar {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav {
+      width: 100%;
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+
+      li {
+        font-size: 18px;
+        padding: 5px;
+      }
+    }
+
+    h1 {
+      font-size: 40px;
+      padding: 10px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header.encabezado-dos {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+
+    nav {
+      width: 100%;
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding-top: 10px;
+      }
+
+      li {
+        padding: 5px 0;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contenedor-medicos {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  article.medicos, article.flecha {
+    flex: 1 1 100%;
+  }
+
+  article.medicos img {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-medicos {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Flechas arriba y abajo */
+  .flecha {
+    flex: 0 0 auto;
+    order: -1; /* muevo todas las flechas arriba */
+    margin-bottom: 10px;
+    width: auto;
+  }
+
+  /* Para que la última flecha quede abajo */
+  .contenedor-medicos article.flecha:last-child {
+    order: 1;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  article.medicos {
+    flex: 0 0 80%; /* ancho mayor para médicos apilados */
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.contacto,
+  section.contactos,
+  section.contact {
+    flex-direction: column;
+
+    article.donde-encontrarnos,
+    article.contactanos {
+      flex: 1 1 100%;
+      padding-left: 20px !important; // reducir padding en móvil
+      padding-right: 20px !important;
+    }
+
+    article.donde-encontrarnos {
+      h2,
+      p,
+      img {
+        padding-left: 0 !important; // quitar padding para móvil
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  section.obrassociales {
+    .contenedor-obras {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    article {
+      &.flecha.izquierda {
+        order: -1; // la sube arriba
+      }
+
+      &.flecha.derecha {
+        order: 99; // la manda al final
+      }
+
+      &.obra-social {
+        width: 80%; // más anchas en mobile
+      }
+    }
+  }
+}
