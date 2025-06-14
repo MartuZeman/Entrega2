@@ -40,7 +40,7 @@
       <!-- Seccion inicial imagenes y texto sobre el consultorio -->
       <section class="principal">
         <article class="bg-colorsecundary">
-          <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+          <h2>Bienvenido a Farmacia Zeman</h2>
         </article>
         <article>
           <img src="../assets/imagen-seccion-principal1.webp" alt="foto" />
@@ -81,45 +81,63 @@
           <img src="../assets/imagen-seccion-principal2.png" alt="foto" />
         </article>
         <article class="bg-colorwhite">
-          <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+          <h2>Ya tenemos vacunas de la gripe</h2>
         </article>
       </section>
       <!-- Seccion de contacto -->
       <section class="contactos">
         <article class="donde-encontrarnos">
           <h2>Donde encontrarnos</h2>
-          <img
-            src="../assets/ubicacion.png"
-            alt="icono ubicacion"
-            width="30px"
-          />
-          <p>Lavalle 886, Luján, Buenos Aires, CP6700</p>
-          <img src="../assets/reloj.png" alt="icono reloj" width="20px" />
-          <p>Horario de atencion: Lunes a viernes de 8hs a 20 hs</p>
-          <img src="../assets/telefono.png" alt="icono telefono" width="20px" />
-          <p>
-            Telefono: 2323 11111 <br />
-            Horario de atencion de 11 hs a 17 hs
-          </p>
+          <div class="contenido">
+            <div class="info-item">
+              <img
+                src="../assets/ubicacion.png"
+                alt="icono ubicacion"
+                width="30px"
+              />
+              <p>Lavalle 886, Luján, Buenos Aires, CP6700</p>
+            </div>
+
+            <div class="info-item">
+              <img src="../assets/reloj.png" alt="icono reloj" width="20px" />
+              <p>Horario de atención: Lunes a viernes de 8hs a 20hs</p>
+            </div>
+
+            <div class="info-item">
+              <img
+                src="../assets/telefono.png"
+                alt="icono telefono"
+                width="20px"
+              />
+              <p>
+                Teléfono: 2323 11111 <br />
+                Horario de atención de 11hs a 17hs
+              </p>
+            </div>
+          </div>
         </article>
+
         <article class="contactanos">
           <h2>Contactanos</h2>
-          <div>
-            <form action="/sumbit" method="post">
+          <div class="contenido">
+            <form action="/submit" method="post">
               <label>Nombre y Apellido</label>
               <input type="text" name="nombre-apellido" id="nombre-apellido" />
-              <label>Telefono</label>
+
+              <label>Teléfono</label>
               <input type="tel" name="telefono" id="telefono" />
 
               <label>Email</label>
               <input type="email" name="email" id="email" />
+
               <label>Obra Social</label>
               <input type="text" name="obra-social" id="obra-social" />
 
               <label>Consulta</label>
-              <textarea name="Consulta" id="consulta"></textarea>
+              <textarea name="consulta" id="consulta"></textarea>
+
               <div class="button">
-                <input type="button" value="Enviar" id="boton" />
+                <input type="submit" value="Enviar" id="boton" />
               </div>
             </form>
           </div>

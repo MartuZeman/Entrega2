@@ -231,7 +231,8 @@ section.contactos,
 section.contact {
   width: 100%;
   display: flex;
-  flex-direction: row; // para que los articles queden en fila
+  flex-wrap: wrap;
+  flex-direction: row;
 
   &.contacto {
     background-color: $color-terciary;
@@ -243,41 +244,53 @@ section.contact {
   }
 
   article {
-    flex-wrap: wrap; // para que se adapte en mobile
-    width: 100%;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    padding: 15px;
 
     &.donde-encontrarnos {
-      flex: 0 0 50%;
-      justify-content: space-between;
+      width: 50%;
+
       align-items: flex-start;
-      padding: 10px 0;
-      box-sizing: border-box;
 
       h2 {
-        padding-left: 50px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding: 20px 0 20px 20px;
       }
 
-      p,
-      img {
-        padding-left: 50px;
+      .contenido {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-top: 10px;
+        padding-bottom: 50px;
+        height: 80%;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: flex-start; // o center si preferís alineado al medio
+        gap: 10px;
+        padding: 5px 20px;
+
+        img {
+          flex-shrink: 0;
+          margin-top: 4px; // opcional: alineación vertical
+        }
+
+        p {
+          margin: 0;
+        }
       }
     }
 
     &.contactanos {
-      flex: 0 0 50%;
+      width: 50%;
       justify-content: flex-start;
-      padding: 15px;
-      box-sizing: border-box;
 
       h2 {
         text-align: left;
-        width: 100%;
-        padding-top: 15px;
-        padding-bottom: 20px;
+        padding: 15px 0 20px 0;
       }
 
       input,
@@ -291,9 +304,10 @@ section.contact {
         border: 2px solid $color-grey;
       }
 
-      button {
+      button,
+      input[type="submit"],
+      input[type="button"] {
         margin-top: 10px;
-        margin-bottom: 10px;
         background-color: $color-primary-dark;
         border-radius: 5px;
         border: 1px solid $color-primary-dark2;
@@ -301,49 +315,80 @@ section.contact {
         padding: 5px;
       }
 
-      div {
+      .button {
         display: flex;
-        flex-direction: column;
-        text-align: left;
-
-        &.button {
-          width: 100%;
-          display: flex;
-          align-items: center;
-        }
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
       }
     }
   }
 }
 
-section.vacunacion {
-  float: left;
-  width: 100%;
-  background-color: $color-terciary;
+section.contactos .contactanos .contenido {
+  padding-right: 30px;
 
-  article {
-    width: 50%;
-    float: left;
-    height: 300px;
-
-    h2 {
-      padding: 20px;
-      font-family: "Fleur De Leah", cursive;
-      font-size: 40px;
-    }
-
-    img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-  }
-
-  h2 {
-    padding: 30px;
+  div.button {
+    display: flex;
+    justify-content: center;
   }
 }
 
+section.contact .contactanos {
+  div {
+    padding-right: 30px;
+  }
+  div.button {
+    display: flex;
+    justify-content: center;
+  }
+}
+section.vacunacion {
+  width: 100%;
+  max-width: 100vw; // limita a la anchura visible
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  background-color: $color-lightblue;
+
+  h2 {
+    width: 100%;
+    text-align: start;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  article {
+    flex: 1 1 200px;
+    min-width: 0; // importante para que no cause overflow en flex
+    box-sizing: border-box;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    &.bg-colorwhite {
+      background-color: $color-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+
+      h2 {
+        margin: 0;
+        padding-left: 0px;
+        text-align: center;
+        font-family: "Fleur De Leah", cursive;
+        font-size: 40px;
+      }
+    }
+  }
+}
 section.horario {
   div {
     display: flex;
@@ -555,16 +600,55 @@ main section.profesionales2 {
 
     article.donde-encontrarnos,
     article.contactanos {
-      flex: 1 1 100%;
-      padding-left: 20px !important; // reducir padding en móvil
-      padding-right: 20px !important;
+      width: 100% !important;
+      padding: 20px 10px;
+
+      h2 {
+        text-align: center;
+        padding-left: 0;
+      }
     }
 
     article.donde-encontrarnos {
-      h2,
-      p,
-      img {
-        padding-left: 0 !important; // quitar padding para móvil
+      .contenido {
+        padding: 0;
+
+        .info-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          padding: 10px;
+
+          img {
+            width: 24px;
+            height: auto;
+            margin-top: 4px;
+          }
+
+          p {
+            margin: 0;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    article.contactanos {
+      form {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        input,
+        select,
+        textarea {
+          font-size: 14px;
+        }
+
+        .button {
+          justify-content: center;
+        }
       }
     }
   }
@@ -604,15 +688,25 @@ main section.profesionales2 {
   }
 
   /* Flechas arriba y abajo */
-  .flecha {
-    flex: 0 0 auto;
-    order: -1; /* muevo todas las flechas arriba */
+  .contenedor-obras {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contenedor-obras article.flecha.izquierda {
+    order: -1; // arriba
     margin-bottom: 10px;
-    width: auto;
+  }
+
+  .contenedor-obras article.flecha.derecha {
+    order: 99; // abajo
+    margin-top: 10px;
   }
 
   /* Para que la última flecha quede abajo */
-  .contenedor-medicos article.flecha:last-child {
+  .contenedor-obras article.flecha:last-child {
     order: 1;
     margin-top: 10px;
     margin-bottom: 0;
@@ -715,5 +809,12 @@ main section.profesionales2 {
         width: 80%; // más anchas en mobile
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .turnos .container {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
