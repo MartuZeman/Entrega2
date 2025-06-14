@@ -560,7 +560,8 @@ main section.profesionales2 article.medicos p {
     flex-direction: column;
     gap: 10px;
   }
-  article.medicos, article.flecha {
+  article.medicos,
+  article.flecha {
     flex: 1 1 100%;
   }
   article.medicos img {
