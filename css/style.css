@@ -584,8 +584,6 @@ main section.profesionales2 article.medicos p {
   section.contacto article.contactanos form,
   section.contactos article.contactanos form,
   section.contact article.contactanos form {
-    display: flex;
-    flex-direction: column;
     padding-left: 20px;
     padding-right: 20px;
   }
